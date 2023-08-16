@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<h2>Calculatrice</h2>
+
+<table>
+  <tr>
+    <th colspan="3"><input type="text" id="f" disabled></th>
+    <td><button onclick="effacer()">AC</button><button onclick="del()">Del</button> </td>
+  
+  </tr>
+  <tr>
+    <td><button onclick="ajouter()" id="7">7</button> </td>
+    <td><button onclick="ajouter()"id="8" >8</button> </td>
+    <td><button onclick="ajouter()" id="9">9</button> </td>
+    <td><button onclick="ajouter()" id="/">/</button> </td>
+            
+  </tr>
+  <tr>
+    <td><button onclick="ajouter()" id="4">4</button> </td>
+    <td><button onclick="ajouter()" id="5">5</button> </td>
+    <td><button onclick="ajouter()" id="6">6</button> </td>
+    <td><button onclick="ajouter()" id="*" >*</button> </td>
+  </tr>
+   <tr>
+    <td><button onclick="ajouter()" id="1">1</button> </td>
+    <td><button onclick="ajouter()" id="2">2</button> </td>
+    <td><button onclick="ajouter()" id="3">3</button> </td>
+    <td><button onclick="ajouter()" id="-" >-</button> </td>
+  </tr>
+   <tr>
+    <td><button onclick="ajouter()" id="0">0</button> </td>
+    <td><button onclick="ajouter()" id=".">.</button> </td>
+    <td><button onclick="calculate()" id="=" >=</button> </td>
+    <td><button onclick="ajouter()" id="+">+</button> </td>
+  </tr>
+
+  
+</table>
+
+</body>
+</html>
+<script>
+
+
+function ajouter(){
+
+document.getElementById('f').value +=event.target.id ;
+
+}
+function calculate(){
+  document.getElementById('f').value=eval(document.getElementById('f').value);
+}
+function effacer(){
+  document.getElementById('f').value="";
+
+}
+function del(){
+  document.getElementById('f').value=document.getElementById('f').value.slice(0,-1);
+}
+
+
+
+</script>
+
